@@ -24,9 +24,9 @@ int main()
 	string STRING_IN;
 	string STRING_OUT = "";
 	string key;
-	const long long B = 5;		//
-	const long long A = 7;		// parameters for random number generation
-	const long long m = 3244121; //
+	const long long B = 49;		//
+	const long long A = 71;		// parameters for random number generation
+	const long long m = 3244121;    //
 	long long n, random;
 	char choice;
 
