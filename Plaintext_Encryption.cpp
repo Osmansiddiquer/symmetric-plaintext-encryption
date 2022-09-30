@@ -17,17 +17,17 @@
 
 #include <iostream>
 #include <string>
-#define b 84		//
-#define A 54		// parameters for random number generation
-#define m 32141433  //
+
 using namespace std;
 int main()
 {
 	string STRING_IN;
 	string STRING_OUT = "";
 	string key;
-
-	long long n;
+	const long long B = 5;		//
+	const long long A = 7;		// parameters for random number generation
+	const long long m = 3244121; //
+	long long n, random;
 	char choice;
 
 	cout<<"Do you wish to encrypt(E) or decrypt(D): ";//take choice for encryption or decryption
@@ -52,11 +52,12 @@ int main()
 	int l = STRING_IN.length();
 
 	//sets initial value of random variable (in this case is also the seed) as ascii value of first char of key
-	n = int(key.at(0)); 
+	random = (long long)(key.at(0)); 
 
 	for(int i=0; i<l; i++)
 	{
-		n = (long long)((float)((A*n*n+b)%m)/(float)(m)*(float)kl); //calculates random number n in ragne of [0, kl) 
+		random = (A*random*random+B)%m; //calculates random number in ragne of [0, m) 
+		n = (long long)(float)(random)/(float)(m)*(float)kl; //scaling random to [0, kl);
 		int shift_number = int(key.at(n)); //calulates shift_number as ascii value of n_th character of the key 
 		int dec = int(STRING_IN.at(i)); //calculates ascii decimal value of i_th character in Input String
 		
@@ -64,15 +65,13 @@ int main()
 		{
 			dec -= shift_number;
 			if(dec<32)
-				dec = 126+(dec-32);
-			shift_number%=8;
+				dec = 126+(dec-31);
 		}
 		else //decryption
 		{	
 			dec += shift_number;
 			if(dec>126)
-				dec = 32+(dec-126);
-			shift_number%=8;
+				dec = 31+(dec-126);
 		}
 		STRING_OUT.push_back(char(dec)); //appending new character to Output String
 	}  
