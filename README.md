@@ -21,5 +21,14 @@ ENCRYPTION and DECRYPTION of strings using ceaser's cipher. Features include:<br
 > - Select a choice for encrpyting OR decrypting a message
 > - Enter the string you want to be processed
 > - Enter your key (Create a new key if encrypting)
+> 
+> ![image](https://user-images.githubusercontent.com/90533561/193341536-163ad662-63db-4aeb-9a34-94dd657a31b9.png)
+> 
+> Encryption
+> 
+> ![image](https://user-images.githubusercontent.com/90533561/193341351-2ba43369-810b-4b66-935e-0c4ba46a53fa.png)
+> 
+> Decryption
+
 ## SHORTCOMINGS:
-- Input and Output lengths are the same
+- Input and Output lengths are the same which may risk exploitation
