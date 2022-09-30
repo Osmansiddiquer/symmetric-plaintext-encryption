@@ -14,10 +14,12 @@ ENCRYPTION and DECRYPTION of strings using ceaser's cipher. Features include:<br
 		
 - Choice for encryption and decryption.
 - Symmetric: same key is used for encrypting and decrypting the message.
-- Does NOT add multiple layers of encryption due to the fact that same amount of effort would be needed to break the encryption if multiple ceaser's ciphers are added.
+- Does NOT add multiple layers of encryption due to the fact that same amount of effort would be needed to break the encryption if multiple ceaser's ciphers are added. Although, due its symmetric nature, encryptions using defferent keys can be added on top of one another and then decrypted using keys in reverse order if needed.
 - Whitespace space is also included in the cipher.
 	
 ## USAGE:
 > - Select a choice for encrpyting OR decrypting a message
 > - Enter the string you want to be processed
 > - Enter your key (Create a new key if encrypting)
+## SHORTCOMINGS:
+- Input and Output lengths are the same
