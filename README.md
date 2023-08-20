@@ -1,5 +1,5 @@
 # symmetric-plaintext-encryption
-*Starting as FoP assignment*
+
 ## OVERVIEW
 ENCRYPTION and DECRYPTION of strings using ceaser's cipher. Features include:<br>
 
